@@ -40,9 +40,9 @@
             </div>
         
 
-            <form id="chatForm" class="chat-form">
+            <form action="/send" id="chatForm" class="chat-form" method="post">
                 <section class="input-container">
-                    <input type="text" id="userInput" placeholder="Ask me about climate, recycling, or clean energy..." aria-label="Type your climate question here" autocomplete="off" required>
+                    <input type="text" id="userInput" name="message" placeholder="Ask me about climate, recycling, or clean energy..." aria-label="Type your climate question here" autocomplete="off" required>
                     <button type="submit" class="send-button">
                         <span>Send</span>
                     </button>
