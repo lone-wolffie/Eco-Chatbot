@@ -1,15 +1,18 @@
 # 🌍 EcoChat – AI Climate Assistant
 
-EcoChat is a chatbot web app that helps users learn about climate change, recycling, and sustainability.
+EcoChat is a chatbot web app that helps users learn about climate change, recycling and sustainability.
 
 ## Tech Stack Used
 1. Frontend
-   - HTML
-   - CSS
-   - JavaScript
+   - HTML5
+   - CSS3
+   - JavaScript (Vanilla)
 2. Backend
-   - Node.js + Express
-   - GroqAI API
+   - Node.js + Express.js
+   - GroqAI API Key and Url
+
+## 🌐 Deployment
+The project is deployed on Render and can be accessed using https://eco-chatbot-jw6x.onrender.com
 
 ## 🚀 Features
 - Ask questions about climate, recycling, or sustainability
@@ -47,8 +50,8 @@ ecochat/
 - Runs an Express server on http://localhost:3000.
 - Uses the GroqAI API to generate chatbot responses.
 - Receives user messages via /send endpoint and sends back AI replies.
-4. Environment Variables
-- `.env` file stores your GroqAI API key
+3. Environment Variables
+- `.env` file stores your GroqAI API key, GroqAI Url and port number.
 
 ## 🛠️ Installation & Setup
 1. Clone the repository
@@ -89,9 +92,6 @@ In `package.json` you can define
 }
 ```
 - Run normally `npm start` or `npm run dev`
-
-## 🌐 Deployment
-The project is deployed on Render and can be accessed using https://eco-chatbot-jw6x.onrender.com
 
 ## Contribution
 Feel free to fork the repository and submit pull requests for improvements or additional features.
