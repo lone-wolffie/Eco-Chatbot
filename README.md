@@ -1,0 +1,101 @@
+# 🌍 EcoChat – AI Climate Assistant
+
+EcoChat is a chatbot web app that helps users learn about climate change, recycling, and sustainability.
+
+## Tech Stack Used
+1. Frontend
+   - HTML
+   - CSS
+   - JavaScript
+2. Backend
+   - Node.js + Express
+   - GroqAI API
+
+## 🚀 Features
+- Ask questions about climate, recycling, or sustainability
+- AI-powered responses from GroqAI
+
+- Light/Dark mode toggle (🔆 / 🌙)
+
+- Timestamps on messages
+
+- User(🧑🏽‍🦱) and Bot(🤖) avatars
+
+- Tracks number of answered questions
+
+- Responsive and modern UI
+
+## Project Structure
+```bash
+ecochat/
+├── public/         
+│   ├── index.html    
+│   ├── styles.css     
+│   └── script.js       
+├── server.js            
+├── .env               
+├── package.json         
+└── README.md            
+```
+
+## How It Works
+1. Frontend
+- `index.html` renders the chatbot interface.
+- `styles.css` defines light/dark mode and styling.
+-  `script.js` handles sending/receiving messages, typing indicators, and avatars.
+2. Backend(server.js)
+- Runs an Express server on http://localhost:3000.
+- Uses the GroqAI API to generate chatbot responses.
+- Receives user messages via /send endpoint and sends back AI replies.
+4. Environment Variables
+- `.env` file stores your GroqAI API key
+
+## 🛠️ Installation & Setup
+1. Clone the repository
+```bash
+git clone https://github.com/lone-wolffie/Eco-Chatbot.git
+cd Eco-Chatbot
+```
+
+2. Install all dependecies
+```bash
+npm install
+```
+
+3. Set up `.env` file
+```bash
+GROQ_API_KEY=your-secret-api-key
+GROQAI_API_URL=your-groq-url
+PORT=your-port-number
+```
+
+4. Start the server
+```bash
+node server.js
+```
+OR
+```bash
+nodemon server.js
+```
+5. Open the App
+Go to `http://localhost:3000` in your browser
+
+### Scripts
+In `package.json` you can define
+```json
+"scripts": {
+  "start": "node server.js",
+  "dev": "nodemon server.js"
+}
+```
+- Run normally `npm start` or `npm run dev`
+
+## 🌐 Deployment
+The project is deployed on Render and can be accessed using 
+
+## Contribution
+Feel free to fork the repository and submit pull requests for improvements or additional features.
+
+## License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
