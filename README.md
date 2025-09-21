@@ -53,7 +53,7 @@ ecochat/
 ## 🛠️ Installation & Setup
 1. Clone the repository
 ```bash
-git clone https://github.com/lone-wolffie/Eco-Chatbot.git
+git clone https://github.com/your-username/Eco-Chatbot.git
 cd Eco-Chatbot
 ```
 
@@ -65,7 +65,7 @@ npm install
 3. Set up `.env` file
 ```bash
 GROQ_API_KEY=your-secret-api-key
-GROQAI_API_URL=your-groq-url
+GROQ_API_URL=your-groq-url
 PORT=your-port-number
 ```
 
@@ -78,7 +78,7 @@ OR
 nodemon server.js
 ```
 5. Open the App
-Go to `http://localhost:3000` in your browser
+- Go to `http://localhost:3000` in your browser
 
 ### Scripts
 In `package.json` you can define
@@ -91,7 +91,7 @@ In `package.json` you can define
 - Run normally `npm start` or `npm run dev`
 
 ## 🌐 Deployment
-The project is deployed on Render and can be accessed using 
+The project is deployed on Render and can be accessed using https://eco-chatbot-jw6x.onrender.com
 
 ## Contribution
 Feel free to fork the repository and submit pull requests for improvements or additional features.
