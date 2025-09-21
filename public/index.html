@@ -11,7 +11,7 @@
 </head>
 <body>
     <header>
-        <button id="toggleTheme">🔆</button>
+        <button id="toggleTheme" title="Toggle Theme">🌙</button>
         <h1>EcoChat</h1>
         <p>Your AI-powered climate assistant. Ask me anything about recycling, renewable energy, carbon footprint and climate action!</p>
     </header>
@@ -21,6 +21,7 @@
             <div id="chatbox">
                 <div class="message bot-message welcome-message">
                     <div class="avatar bot-avatar">🤖</div>
+                    
                     <div class="message-content">
                         <div class="message-bubble">
                             <p>
@@ -35,19 +36,16 @@
                                 What would you like to know about today?
                             </p>
                         </div>
-                        <div class="timestamp"></div>
                     </div>
                 </div>
             </div>
-        
-
+            
             <form action="/send" id="chatForm" class="chat-form" method="post">
                 <section class="input-container">
                     <input type="text" id="userInput" name="message" placeholder="Ask me about climate, recycling, or clean energy..." aria-label="Type your climate question here" autocomplete="off" required>
                     <button type="submit" class="send-button">
                         <span>Send</span>
                     </button>
-                
                 </section>
                 <section class="suggestions">
                     <div class="suggestion-chip" onclick="fillSuggestion('How can I reduce my carbon footprint?')">Carbon footprint</div>
@@ -153,8 +151,6 @@
             </div>
         </div>
     </footer>
-
-    
 
     <script src="script.js"></script>
 </body>

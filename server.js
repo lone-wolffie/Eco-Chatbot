@@ -1,6 +1,7 @@
 import express from "express";
 import bodyParser from "body-parser";
 import axios from "axios";
+import cors from "cors";
 import dotenv from "dotenv";
 dotenv.config();
 
@@ -10,6 +11,7 @@ const port = 3000;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
+app.use(cors());
 
 const GROQ_API_URL = process.env.GROQ_API_URL;
 const GROQ_API_KEY = process.env.GROQ_API_KEY;
@@ -32,15 +34,23 @@ app.post("/send", async (req, res) => {
                     content:
                     `You are EcoChat, a climate-focused assistant. 
                     Always reply in a short, simple bullet-point list. 
-                    Avoid long paragraphs. Use the bullet symbol '•', no paragraphs. 
-                    Each bullet must be on its own line.`
+                    Avoid long paragraphs. Use the bullet symbol '•'. 
+                    Each bullet must be on its own line.
+                    After answering, ask the user if they'd like more clarification or examples.
+                    Be warm, approachable, and enthusiastic about environmental topics.
+                    Show genuine interest in helping the user learn more.
+                    Share examples from Kenya where necessary.`
                 },
                 {
                     role: "user",
-                    content:`${message}. 
+                    content:`${message}
+                    Start with a brief friendly acknowledgment if appropriate. 
                     Format your answer as bullet points only. 
-                    Do not include numbered codes.
-                    Remove all * characters.`,
+                    Do not include numbered codes(#1).
+                    Add emojis where helpful.
+                    Remove all * characters.
+                    
+                    `,
                 },
                 ],
                 temperature: 0.7,
@@ -59,7 +69,7 @@ app.post("/send", async (req, res) => {
     } catch (error) {
         console.error("Groq API error:", error.response?.data || error.message);
         res.status(500).json({
-            reply: "⚠️ Error: Groq API request failed.",
+            reply: "Oops! EcoChat couldn't access the information😬. Please try again.",
             details: error.response?.data || error.message,
         
         });
